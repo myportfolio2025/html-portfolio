@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>③リンクの作り方</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.css" rel="stylesheet">
+</head>
+	
+<body class="subpage">
+	<header>
+		<h1>ようこそ<br></h1>
+		<h2>ここではリンクの作成ついて掲示します</h2>
+	</header>
+	
+	<main>
+		<h3>この部分です</h3>
+		<img src="images/リンク画面.png" alt="リンク説明用">
+	
+		<div class="momo">
+		<h3>&#x31;&#xFE0F;&#x20E3;≪準備≫</h3>
+		<h4>先に準備として、設置したいものがあります</h4>
+		<!-- ここにヘッダー・メイン・フッダー+navの説明挿入 -->
+		<h3>最初にindex.htmlのページを作った時、↓こうなっていましたね。</h3>
+			<img src="images/おまけ2.png" alt="ページ構成css説明用">
+		<h3>この後、以下の様に<span class="blue-text">bodyの中に、
+			ヘッダー(<span class="red-text">&lt;header&gt;</span>)、メイン(<span class="red-text">&lt;main&gt;</span>)、フッター(<span class="red-text">&lt;footer&gt;</span>)を追加します。<br></span>
+			後で飾りつけの設定では｢CSSプログラムを記述する｣という行程が発生しますが、その際に、<span class="blue-text"><br>
+			<div class="bordermini">
+			ページの冒頭は&lt;header&gt;<br>
+			ページの主な中身は&lt;main&gt;<br>
+			ページの締めは&lt;footer&gt;
+			</div></span>
+<br>に、それぞれグループ化してまとめてフォントの設定をする事が可能になるためです。</h3>
+		<img src="images/はじめに3.png" alt="最初の画面css説明用2">
+		<h4>グループでまとめたとしても、その中の一部だけ変更したい所があれば、後ほどクラス名や他タグを付けるという編集も可能なのでご安心ください！</h4>
+		
+		<h4>&#x31;&#xFE0F;&#x20E3;-1　本ページの場合、ヘッダー＝ページの冒頭には｢このページの作り方｣の部分が該当しますので、<br>
+			&lt;header&gt;タグを入力する場所は、先程記述した&lt;h1&gt;このページの作り方&lt;/h1&gt;を囲むようにします。</h4>
+			<p>この時インデントもしておきます。</p>
+		<h4>&#x31;&#xFE0F;&#x20E3;-2　その下に、&lt;main&gt;タグを入力したいので、&lt;p&gt;はじめてWebページを作成する方へ～の前に&lt;main&gt;を追記します。</h4>
+			<p>&lt;/header&gt;の下を1行空けると見やすいですね</p>
+		<h4>&#x31;&#xFE0F;&#x20E3;-3　今まで書いていた文章の後に、&lt;/main&gt;タグを入力して閉じたら、<br>
+			そのまま続けて(1行空けて)&lt;footer&gt;タグも追加しておきます</h4>
+					
+		<pre class="code"><code>
+		1	&lt;!DOCTYPE html>						
+		2	&lt;html&gt;
+		3	&lt;head&gt;
+		4	&lt;meta charset="UTF-8"&gt;
+		5	&lt;title&gt;あなたが付けたタイトル&lt;/title&gt;
+		6	&lt;/head&gt;
+		7	&lt;body&gt;
+		8		<span class="red-text">&lt;header&gt;</span>
+		9			&lt;h1&gt;このページの作り方&lt;/h1&gt;
+		10		<span class="red-text">&lt;/header&gt;</span>
+		11
+		12		<span class="red-text">&lt;main&gt;</span>
+		13			&lt;p&gt;はじめてWebページを作成する方へ&lt;br&gt;
+		14			ここではWebページを作成するにあたって、基本的なノウハウを以下の通りリストアップしました。&lt;br&gt;
+		15			ぜひリンクに飛び、ご活用ください。&lt;br&gt;
+		16			(本ページではEclipseという統合開発環境を使用しています)
+		17			&lt;/p&gt;
+		18		<span class="red-text">&lt;/main&gt;</span>
+		19			
+		20		<span class="red-text">&lt;footer&gt;</span>	
+		21				
+		22		<span class="red-text">&lt;/footer&gt;</span>
+		23		
+		24	&lt;/body&gt;			
+		25	&lt;/html&gt;
+		</code></pre>
+		
+		<h4 class="blue-text">&#x31;&#xFE0F;&#x20E3;-4　ポイント<br>
+			ここでコメントの入力についてお伝えします！<br>
+			｢○○.html｣のプログラムにコメントを残すには、『&lt;!--   コメント --&gt;』と、&lt;!-- と --&gt; で囲んで書きます！</h4>
+		<h4>今追加した各タグの前後に、分かり易くするために下記の様にコメントを追加してみましょう！</h4>
+		<p>コメントはブラウザには表示されませんが、HTMLファイルを「表示→ソース」で見たり、F12を押下すると見えるので、機密情報は書かないようにしましょう！</p>
+		
+		<pre class="code"><code>
+		1	&lt;!DOCTYPE html>						
+		2	&lt;html&gt;
+		3	&lt;head&gt;
+		4	&lt;meta charset="UTF-8"&gt;
+		5	&lt;title&gt;あなたが付けたタイトル&lt;/title&gt;
+		6	&lt;/head&gt;
+		7	&lt;body&gt;
+		8		<span class="red-text">&lt;!-- ヘッダーここから --&gt;</span>
+		9		&lt;header&gt;
+		10			&lt;h1&gt;このページの作り方&lt;/h1&gt;
+		11		&lt;/header&gt;
+		12		<span class="red-text">&lt;!-- ヘッダーここまで --&gt;</span>
+		13		
+		14		<span class="red-text">&lt;!-- メインコンテンツ --&gt;</span>
+		15		&lt;main&gt;		
+		16			&lt;p&gt;はじめてWebページを作成する方へ&lt;br&gt;
+		17			ここではWebページを作成するにあたって、基本的なノウハウを以下の通りリストアップしました。&lt;br&gt;
+		18			ぜひリンクに飛び、ご活用ください。&lt;br&gt;
+		19			(本ページではEclipseという統合開発環境を使用しています)
+		20			&lt;/p&gt;
+		21		&lt;/main&gt;
+		22
+		23		<span class="red-text">&lt;!-- フッターここから --&gt;</span>
+		24		&lt;footer&gt;		
+		25		
+		26		&lt;/footer&gt;				
+		27		<span class="red-text">&lt;!-- フッターここまで --&gt;</span>
+		28	
+		29	&lt;/body&gt;	
+		30	&lt;/html&gt;	
+		</code></pre>
+		
+		<h4>&#x31;&#xFE0F;&#x20E3;-5　もう少しだけ追加します。<br>
+			この後追加するリストは、ナビゲーションの要素を持ちますので、更に<span class="red-text">&lt;nav&gt;</span>を追加しておきたいと思います。</h4>
+		<h4 class="blue-text">ナビゲーションとは、Webサイトの他の主要なページへのリンクが複数並んだ部分のことです。</h4>
+		<h4>今回は&lt;main&gt;の、今まで書いてきた文字の下に(インデントして)入れましょう！<br>
+			ちなみにナビゲーションはページのどこにでも置けますが、一般的にはヘッダー(&lt;header&gt;)にあることが多いです。</h4>
+			
+		<pre class="code"><code>
+		1	&lt;!DOCTYPE html>						
+		2	&lt;html&gt;
+		3	&lt;head&gt;
+		4	&lt;meta charset="UTF-8"&gt;
+		5	&lt;title&gt;あなたが付けたタイトル&lt;/title&gt;
+		6	&lt;/head&gt;
+		7	&lt;body&gt;
+		8		&lt;!-- ヘッダーここから --&gt;
+		9		&lt;header&gt;
+		10			&lt;h1&gt;このページの作り方&lt;/h1&gt;
+		11		&lt;/header&gt;
+		12		&lt;!-- ヘッダーここまで --&gt;
+		13		
+		14		&lt;!-- メインコンテンツ --&gt;
+		15		&lt;main&gt;		
+		16			&lt;p&gt;はじめてWebページを作成する方へ&lt;br&gt;
+		17			ここではWebページを作成するにあたって、基本的なノウハウを以下の通りリストアップしました。&lt;br&gt;
+		18			ぜひリンクに飛び、ご活用ください。&lt;br&gt;
+		19			(本ページではEclipseという統合開発環境を使用しています)
+		20			&lt;/p&gt;
+		21
+		22			<span class="red-text">&lt;!-- ナビゲーション --&gt;</span>
+		23			<span class="red-text">&lt;nav&gt;</span>
+		24
+		25			<span class="red-text">&lt;/nav&gt;</span>
+		26		&lt;/main&gt;
+		27
+		28		&lt;!-- フッターここから --&gt;
+		29		&lt;footer&gt;		
+		30		
+		31		&lt;/footer&gt;				
+		32		&lt;!-- フッターここまで --&gt;
+		33	
+		34	&lt;/body&gt;	
+		35	&lt;/html&gt;	
+		</code></pre>
+		</div>
+		
+		<div class="lemon">
+		<h3 class="blue-text">&#x32;&#xFE0F;&#x20E3;それではここから、リストを&lt;nav&gt;タグの中に入力しましょう！</h3>
+		<h3 class="blue-text">リストにしたい文字自体は<span class="red-text">&lt;li&gt;</span>　～　<span class="red-text">&lt;/li&gt;</span>の間に入力しますが、その前に<br>
+			箇条書きリストにしたい場合は<span class="red-text">&lt;ul&gt;</span>　～　<span class="red-text">&lt;/ul&gt;</span>で囲み、<br>
+			番号付きリストにしたい場合は<span class="red-text">&lt;ol&gt;</span>　～　<span class="red-text">&lt;/ol&gt;</span>で囲みます。</h3>
+	
+		<img src="images/リンク説明用.png" alt="リンク用語説明用" class="img-margin-bottom">
+	
+		<pre class="code"><code>
+		1	&lt;!DOCTYPE html>						
+		2	&lt;html&gt;
+		3	&lt;head&gt;
+		4	&lt;meta charset="UTF-8"&gt;
+		5	&lt;title&gt;あなたが付けたタイトル&lt;/title&gt;
+		6	&lt;/head&gt;
+		7	&lt;body&gt;
+		8		&lt;!-- ヘッダーここから --&gt;
+		9		&lt;header&gt;
+		10			&lt;h1&gt;このページの作り方&lt;/h1&gt;
+		11		&lt;/header&gt;
+		12		&lt;!-- ヘッダーここまで --&gt;
+		13		
+		14		&lt;!-- メインコンテンツ --&gt;
+		15		&lt;main&gt;		
+		16			&lt;p&gt;はじめてWebページを作成する方へ&lt;br&gt;
+		17			ここではWebページを作成するにあたって、基本的なノウハウを以下の通りリストアップしました。&lt;br&gt;
+		18			ぜひリンクに飛び、ご活用ください。&lt;br&gt;
+		19			(本ページではEclipseという統合開発環境を使用しています)
+		20			&lt;/p&gt;
+		21
+		22			&lt;!-- ナビゲーション --&gt;
+		23			&lt;nav&gt;
+		24				<span class="red-text">&lt;lu&gt;</span>	
+		25					<span class="red-text">&lt;li>①はじめに&lt;/li&gt;</span>
+		26					<span class="red-text">&lt;li>②ロゴ・見出しの作り方&lt;/li&gt;</span>
+		27					<span class="red-text">&lt;li>③(ここ、)リンクの作成&lt;/li&gt;</span>
+		28					<span class="red-text">&lt;li>④画像挿入&lt;/li&gt;</span>
+		29					<span class="red-text">&lt;li>⑤テキスト編集&lt;/li&gt;</span>
+		30				<span class="red-text">&lt;/lu&gt;</span>
+		31			&lt;/nav&gt;
+		32		&lt;/main&gt;
+		33		
+		34		&lt;!-- フッターここから --&gt;
+		35		&lt;footer&gt;		
+		36		
+		37		&lt;/footer&gt;				
+		38		&lt;!-- フッターここまで --&gt;
+		39	
+		40	&lt;/body&gt;	
+		41	&lt;/html&gt;
+		</code></pre>
+		</div>
+		
+		<div class="momo">
+		<h3>★文字自体はこれで表示はできるのですが、ここから<span class="blue-text">その文字が押下された時に、各リンク先ページに飛ぶ設定</span>を行います★</h3>
+		<h3>&#x33;&#xFE0F;&#x20E3;まず前提として、<span class="red-text">リンク先のページは「○○.html」</span>という別のファイルを設ける必要があります。<br>
+			最初にホームのページを作成した要領で、同じ場所に、<span class="blue-text">「作りたいリンク先のページ.html」(→①)を作りたいリンクの数だけ新規作成</span>しましょう！</h3>
+		<p>本ページでは5つのリンク先ページを作っています</p>
+		<img src="images/リンク画面説明用.png" alt="リンク説明用" class="img-margin-topbottom">
+		</div>
+		
+		<div class="lemon">
+		<h3>&#x34;&#xFE0F;&#x20E3;ホームページのリンクを押下した時に、①で作った各ページに飛ぶ設定をします。</h3>
+		<h3 class="blue-text">リンクを設定するには&lt;a&gt;　～　&lt;/a&gt;を使用します。<br>
+			構文としては『<span class="red-text">&lt;a href="</span>リンク先<span class="red-text">"&gt;</span>このリンクをクリック<span class="red-text">&lt;/a&gt;</span>』です。<br>
+			このリンクをクリック　の部分には、リンクするコンテンツ(クリックする部分)を書きます。</h3>	
+	
+		<h3 class="bordermini">リンク先は、以下3種類となります。<br>
+			・<span class="red-text">サイト内リンク</span>(<span class="blue-text">サイト内の他のページへリンクする</span>)<br>
+			・<span class="red-text">外部サイトへのリンク</span>(<span class="blue-text">他のサイトのページにリンクする</span>)<br>
+			・<span class="red-text">ページ内リンク</span>(<span class="blue-text">リンク先が自分のページ</span>)</h3>
+	
+		<p>	本ページは「サイト内リンク」で作成しています。</p>
+		
+		<h3>サイト内リンクの場合の"リンク先"</h3>
+		<p>①で、ホームページと同じ場所にリンク先のページ(-以降※1)を新規作成した場合には、<br>
+			『&lt;a href="リンク先"&gt;○○○&lt;/a&gt;』の"リンク先"に入るのはフォルダ名のみでOKです。
+		</p>
+		<p>	もしも、違うフォルダに作った場合、<br>
+			※1を保存した場所と同じ場所にフォルダがあり、その中にリンク先を作っている場合には『フォルダ名/ファイル名』です。</p>
+		<p>	※1を保存したフォルダとは違うフォルダに存在する場合には、※1の保存場所から『../』で1つ親のフォルダに遡ります。<br>
+			2つ遡る場合には『../../』です。</p>
+	
+		
+		
+		<p>例えば、index.htlmを『root』の中にある『folderX』というフォルダに保存。リンク先(※1)を以下"A"、"B"、"C"、"D"に保存した場合の各記述方法は以下のようになります。</p>
+			<img src="images/リンク相対パス.png" alt="リンク相対パス説明用" class="img-margin-topbottom">
+		<p>『&lt;a href="linkA.html"&gt;リンクA&lt;/a&gt;』<br>
+			『&lt;a href="folderY/linkB.html"&gt;リンクB&lt;/a&gt;』<br>
+			『&lt;a href="../linkC.html"&gt;リンクC&lt;/a&gt;』<br>
+			『&lt;a href="../../folderZ/linkD.html"&gt;リンクD&lt;/a&gt;』</p>
+		
+	
+		<h3>以上を踏まえて、前回までのプログラムに以下の通り追記すると、下の様なページが完成します↓</h3>
+		<pre class="code"><code>
+		1	&lt;!DOCTYPE html>						
+		2	&lt;html&gt;
+		3	&lt;head&gt;
+		4	&lt;meta charset="UTF-8"&gt;
+		5	&lt;title&gt;あなたが付けたタイトル&lt;/title&gt;
+		6	&lt;/head&gt;
+		7	&lt;body&gt;
+		8		&lt;!-- ヘッダーここから --&gt;
+		9		&lt;header&gt;
+		10			&lt;h1&gt;このページの作り方&lt;/h1&gt;
+		11		&lt;/header&gt;
+		12		&lt;!-- ヘッダーここまで --&gt;
+		13		
+		14		&lt;!-- メインコンテンツ --&gt;
+		15		&lt;main&gt;		
+		16			&lt;p&gt;はじめてWebページを作成する方へ&lt;br&gt;
+		17			ここではWebページを作成するにあたって、基本的なノウハウを以下の通りリストアップしました。&lt;br&gt;
+		18			ぜひリンクに飛び、ご活用ください。&lt;br&gt;
+		19			(本ページではEclipseという統合開発環境を使用しています)
+		20			&lt;/p&gt;
+		21
+		22			&lt;!-- ナビゲーション --&gt;
+		23			&lt;nav&gt;
+		24				&lt;lu&gt;	
+		25					&lt;li><span class="red-text">&lt;a href="first.html"&gt;</span>①はじめに<span class="red-text">&lt;/a></span>&lt;/li&gt;
+		26					&lt;li><span class="red-text">&lt;a href="logo.html"&gt;</span>②ロゴ・見出しの作り方<span class="red-text">&lt;/a></span>&lt;/li&gt;
+		27					&lt;li><span class="red-text">&lt;a href="link.html"&gt;</span>③(ここ、)リンクの作成<span class="red-text">&lt;/a></span>&lt;/li&gt;
+		28					&lt;li><span class="red-text">&lt;a href="img.html"&gt;</span>④画像挿入<span class="red-text">&lt;/a></span>&lt;/li&gt;
+		29					&lt;li><span class="red-text">&lt;a href="text.html"&gt;</span>⑤テキスト編集<span class="red-text">&lt;/a></span>&lt;/li&gt;
+		30				&lt;/lu&gt;
+		31			&lt;/nav&gt;
+		32		&lt;/main&gt;
+		33		
+		34		&lt;!-- フッターここから --&gt;
+		35		&lt;footer&gt;		
+		36		
+		37		&lt;/footer&gt;				
+		38		&lt;!-- フッターここまで --&gt;
+		39	
+		40	&lt;/body&gt;	
+		41	&lt;/html&gt;
+		</code></pre>
+	
+		<img src="images/確認用2.png" alt="途中経過確認用Photo">
+	
+		<h3>箇条書きのリストを追加することができました！<br>
+			更に、リストの文字をクリックすると、各リンク先に飛ぶことができるようになっているはずです。<br>
+			リンク先のページでは、これまでに出てきた&lt;h〇&gt;や&lt;p&gt;タグ等や、次項④で出てくる画像挿入等を使っておいおい自由なページを作成してみてください。<br>
+			改めまして、文字やページの各設定は、⑤テキスト編集にて行います。</h3>
+		</div>
+		
+		<h3>おまけ　本ページでは未使用の｢外部サイトへのリンク｣、｢ページ内リンク｣については<a href="anotherLink.html">こちら</a></h3>
+	</main>
+	
+	<footer>
+		<div class="gotop">
+			<a href="#top"><img src="images/gotop.svg" alt="トップページへ戻る"></a>
+		</div>
+	</footer>
+</body>

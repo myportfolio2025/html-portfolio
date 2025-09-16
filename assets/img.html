@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>画像挿入</title>
+	<link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body class="subpage">
+	<header>
+		<h1>ようこそ<br></h1>
+		<h2>ここでは画像挿入方法ついて掲示します</h2>
+	</header>
+	
+	<main>
+		<div class="momo">
+		<h3 class="blue-text">画像の挿入には<span class="red-text">&lt;img&gt;</span>タグを使います。<br>
+			&lt;a&gt;タグと同様、相対パスや絶対パスを使用します。<br>
+			構文としては、『<span class="red-text">&lt;img src="</span>画像ファイルの場所<span class="red-text">" alt="</span>画像の説明文<span class="red-text">"&gt;</span>』です。</h3>
+		<h4>画像ファイルの場所には、相対パスや絶対パスを記述します。画像の説明文はあった方が良いですが、説明不要の場合でも""は付けましょう。</h4>
+		<p>※絶対パスとは、｢https://｣もしくは｢http://｣から始まるURLです。</p>
+		</div>
+		
+		<div class="lemon">
+		<h4>今回は練習で、ホームのページにサンプル画像を挿入してみましょう！</h4>
+		<p>現在、&lt;index.html&gt;は以下の様になっていると思います。</p>
+		<pre class="code"><code>
+		1	&lt;!DOCTYPE html>						
+		2	&lt;html&gt;
+		3	&lt;head&gt;
+		4	&lt;meta charset="UTF-8"&gt;
+		5	&lt;title&gt;あなたが付けたタイトル&lt;/title&gt;
+		6	&lt;/head&gt;
+		7	&lt;body&gt;
+		8		&lt;header&gt;
+		9			&lt;h1&gt;このページの作り方&lt;/h1&gt;
+		10		&lt;/header&gt;
+		11
+		12		&lt;main&gt;
+		13			&lt;p&gt;はじめてWebページを作成する方へ&lt;br&gt;
+		14			ここではWebページを作成するにあたって、基本的なノウハウを以下の通りリストアップしました。&lt;br&gt;
+		15			ぜひリンクに飛び、ご活用ください。&lt;br&gt;
+		16			(本ページではEclipseという統合開発環境を使用しています)
+		17			&lt;/p&gt;
+		18	
+		19			&lt;nav&gt;
+		20				&lt;lu&gt;	
+		21					&lt;li>&lt;a href="first.html"&gt;①はじめに&lt;/a>&lt;/li&gt;
+		22					&lt;li>&lt;a href="logo.html"&gt;②ロゴ・見出しの作り方&lt;/a>&lt;/li&gt;
+		23					&lt;li>&lt;a href="link.html"&gt;③(ここ、)リンクの作成&lt;/a>&lt;/li&gt;
+		24					&lt;li>&lt;a href="img.html"&gt;④画像挿入&lt;/a>&lt;/li&gt;
+		25					&lt;li>&lt;a href="text.html"&gt;⑤テキスト編集&lt;/a>&lt;/li&gt;
+		26				&lt;/lu&gt;
+		27			&lt;/nav&gt;
+		28		&lt;/main&gt;
+		29		
+		30		&lt;footer&gt;
+		31		
+		32		&lt;/footer&gt;
+		33		
+		34	&lt;/body&gt;
+		35	&lt;/html&gt;
+		</code></pre>
+		</div>
+		
+		<div class="momo">
+		<h3>この、リストの下に、&lt;img src="images/sample.png" alt="画像サンプル"&gt;と付け加えてみました！</h3>
+		<p>この場合、相対パスにて『index.html』と同じ場所に作成されたimagesフォルダのsample.pngと言う名前の画像を("画像サンプル"と説明文を付けて)挿入したことになります。</p>
+		<pre class="code"><code>
+		1	&lt;!DOCTYPE html>						
+		2	&lt;html&gt;
+		3	&lt;head&gt;
+		4	&lt;meta charset="UTF-8"&gt;
+		5	&lt;title&gt;あなたが付けたタイトル&lt;/title&gt;
+		6	&lt;/head&gt;
+		7	&lt;body&gt;
+		8		&lt;header&gt;
+		9			&lt;h1&gt;このページの作り方&lt;/h1&gt;
+		10		&lt;/header&gt;
+		11
+		12		&lt;main&gt;
+		13			&lt;p&gt;はじめてWebページを作成する方へ&lt;br&gt;
+		14			ここではWebページを作成するにあたって、基本的なノウハウを以下の通りリストアップしました。&lt;br&gt;
+		15			ぜひリンクに飛び、ご活用ください。&lt;br&gt;
+		16			(本ページではEclipseという統合開発環境を使用しています)
+		17			&lt;/p&gt;
+		18	
+		19			&lt;nav&gt;
+		20				&lt;lu&gt;	
+		21					&lt;li>&lt;a href="first.html"&gt;①はじめに&lt;/a>&lt;/li&gt;
+		22					&lt;li>&lt;a href="logo.html"&gt;②ロゴ・見出しの作り方&lt;/a>&lt;/li&gt;
+		23					&lt;li>&lt;a href="link.html"&gt;③(ここ、)リンクの作成&lt;/a>&lt;/li&gt;
+		24					&lt;li>&lt;a href="img.html"&gt;④画像挿入&lt;/a>&lt;/li&gt;
+		25					&lt;li>&lt;a href="text.html"&gt;⑤テキスト編集&lt;/a>&lt;/li&gt;
+		26				&lt;/lu&gt;
+		27			&lt;/nav&gt;
+		28				
+		29			<span class="red-text">&lt;img src="images/sample.png" alt="サンプル画像"&gt;</span>
+		30		&lt;/main&gt;
+		31		
+		32		&lt;footer&gt;
+		33		
+		34		&lt;/footer&gt;
+		35		
+		36	&lt;/body&gt;
+		37	&lt;/html&gt;
+		</code></pre>
+	
+		<h3>すると、ホームのページにサンプル画像が追加されました。</h3>
+		<img src="images/画像挿入後.png" alt="画像挿入時の画面確認">
+		<h3>いよいよ次項、⑤テキスト編集では、ここまでの見出し・段落・リンク・画面の設定を行います。</h3>
+		</div>
+				
+		<div class="glay">
+		<h3>おまけ</h3>
+		<h4>ちなみに画像挿入ですが、このようにコンテンツの背景としても挿入可能です↓</h4>
+		<div class="image-container">
+			<img src="images/画像挿入後おまけ1.png" alt="コンテンツの背景に画像挿入" class="img-margin-topbottom">
+			<img src="images/画像挿入後おまけ2.png" alt="コンテンツの背景に画像挿入" class="img-margin-topbottom">
+		</div>
+		<!-- <h4>詳細はホームページの番外編(レジュメ)に掲載</h4> -->
+		<h4>詳細は⑤テキスト編集にて</h4>
+		</div>
+		
+		<div class="glay">
+		<h3>おまけ-2</h3>
+		<h4>また、本ページを3秒以上ご覧いただいた方には、動く画像（アニメーション画像）が現れましたね。<br>
+			この詳細についても、⑤テキスト編集にて触れたいと思います。</h4>
+		<div class="image-container">
+			<img src="images/画像1mini.png" alt="アニメーション画像挿入" class="img-margin-topbottom">
+			<img src="images/画像2mini.png" alt="アニメーション画像挿入" class="img-margin-topbottom">
+			<img src="images/画像3mini.png" alt="アニメーション画像挿入" class="img-margin-topbottom">
+		</div>
+		</div>
+
+		
+	</main>
+	
+	<footer>
+		<div class="gotop">
+			<a href="#top"><img src="images/gotop.svg" alt="トップページへ戻る"></a>
+		</div>
+	</footer>
+
+</body>
+</html>

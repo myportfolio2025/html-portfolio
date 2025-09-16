@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/* 全てのページに適用 */
+		
+a:link{		
+	color: #0000FF;	
+	text-decoration: none;	
+}		
+a:visited{		
+	color: #0000FF;	
+	text-decoration: none;	
+}		
+a:hover{		
+	color: #0000FF;	
+	text-decoration: underline;	
+}		
+a:active{		
+	color: #0000FF;	
+	text-decoration: underline;	
+}		
+
+/* ヘッダー */
+header {
+    text-align: center;
+    padding-top: 75px;
+    padding-bottom: 75px;
+    background-image: url("../images/sample.png");
+    background-size: auto;	/* 画像を元のサイズで表示 */
+    background-position: left top;  /* 左寄せ・縦は上寄せ */
+    background-repeat: repeat-x;	 /* 画像を横方向に繰り返す */
+    /* background-size: cover;  要素全体をカバー 　*/
+    /* background-position: center; 中央に配置　*/
+    /* background-repeat: no-repeat; 繰り返しなし　*/
+}
+
+/* メイン */
+main p{
+	background-color: rgb(100, 220, 240);
+}
+.img-margin {
+  	margin-top: 20px;
+}
+
+/* フッター */
+
+/* 個別設定 */

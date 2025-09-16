@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>はじめに</title>
+<link rel="stylesheet" href="css/style.css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.css" rel="stylesheet">
+
+</head>
+	<h1 class="logo_1">はじめに</h1>
+
+<!-- 画像拡大縮小 -->
+<body>
+	<main>
+		<h3>ホームのページ＝『index.html』を新規作成する</h3>
+		<div class="Photo1_1">
+		<img src="images/はじめに.png" alt="最初の画面">
+		</div>
+	</main>
+	
+	<p>5行目のタイトルは、『index.html』とは別で名前を付けます。<br>
+		お気に入り登録される時に、標準で表示される名前になりますので、分かりやすいものを付けると良いです。</p>
+	<h3>ホームのページを新規作成する時は、『index.html』と付けるのが一般的です。<br>
+		本サイトでも、以降『index.html』と表記します。</h3>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+
+<!-- ページトップへ -->
+<!--<div>SCROLL↓</div> -->
+<a href="#" class="pagetop"></a>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+	var pagetop = $('.pagetop');
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 100) {
+			pagetop.fadeIn();
+		} else {
+			pagetop.fadeOut();
+			}
+		});
+		pagetop.click(function () {
+			$('body, html').animate({ scrollTop: 0 }, 500);
+			return false;
+	});
+});
+</script>
+</html>

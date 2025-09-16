@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>他リンク</title>
+	<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+	<header>
+	<h2>｢外部サイトへのリンク｣、｢ページ内リンク｣について</h2>
+	<h3>どちらも、構文としては『&lt;a href="リンク先"&gt;このリンクをクリック&lt;/a&gt;』である点は同じです。</h3>
+	</header>
+	
+	<main>
+	<div class="border2">
+	<h3>≪｢外部サイトへのリンク｣の場合≫<br>
+		構文は『&lt;a href="絶対パス"&gt;○○○&lt;/a&gt;』です</h3>
+	<h3>絶対パスとは、｢https://｣もしくは｢http://｣から始まるURLです。</h3>
+	</div>
+	
+	<div class="border2">
+	<h3>≪｢ページ内リンク｣の場合≫</h3>
+	<h4>｢ページ内リンク｣について、まずイメージは以下の通りとなります。</h4>
+	<img src="images/サイト内リンク説明用2.png" alt="サイト内リンクイメージ">
+	<h4>この様に、ページ内にある、実際に書かれている場所までジャンプする時に使えます。長いページだと便利ですね。</h4>
+
+	<h4>試しに、イメージ図のようにリストの「③(ここ、)リンクの作成」をクリックしたら<br>
+		ページ内の下に③(ここ、)リンクの作成と説明文を書いた所まで飛ぶようにしてみましょう。</h4>
+		
+	<h3>まずは、サイト内の飛びたいところに目印(=id属性と呼ばれるもの)を付けます。</h3>
+	<h3>各リンクの説明文を書く際に、&lt;h3&gt;タグを使って書くとしましょう。<br>
+		その&lt;h3&gt;タグの前に、&lt;div id="○○"&gt;と書き、id属性を設定します。<br>
+		最後に説明文を書き終わったら&lt;/div&gt;で閉じます。</h3>
+	<h4>今回はこのid属性を、｢first｣、｢logo｣、「link」、｢img｣、｢text｣と名付けてみましょう。</h4>
+	
+	
+	<h3>続いて、<br>
+		構文は『&lt;a href="HTMLファイルのURLまたはパス#id属性の値"&gt;リンクテキスト&lt;/a&gt;』です</h3>
+	<h3>今回は<br>
+		『&lt;a href="index.html#first"&gt;①はじめに&lt;/a&gt;』や、<br>
+		『&lt;a href="index.html#link"&gt;③(ここ、)リンクの作成&lt;/a&gt;』などとすればOKです</h3>
+		<p>index.htmlは、省略して、『&lt;a href="#link"&gt;③(ここ、)リンクの作成&lt;/a&gt;』などと書くこともできるのですが、<br>
+			もし他のプログラムで流用するとなった場合に、他のページに貼り付けた途端リンクできなくなったとなってはいけませんので<br>
+			敢えて残してもOKです。</p>
+			
+	<h3>以上を踏まえて、仮に本サイトを｢ページ内リンク｣で作成した場合のプログラムは、下の様に記述することができます↓</h3>
+		<pre class="code"><code>
+		1	&lt;!DOCTYPE html>						
+		2	&lt;html&gt;
+		3	&lt;head&gt;
+		4	&lt;meta charset="UTF-8"&gt;
+		5	&lt;title&gt;あなたが付けたタイトル&lt;/title&gt;
+		6	&lt;/head&gt;
+		7	&lt;body&gt;
+		8		&lt;header&gt;
+		9			&lt;h1&gt;このページの作り方&lt;/h1&gt;
+		10		&lt;/header&gt;
+		11
+		12		&lt;main&gt;
+		13			&lt;p&gt;はじめてWebページを作成する方へ&lt;br&gt;
+		14			ここではWebページを作成するにあたって、基本的なノウハウを以下の通りリストアップしました。&lt;br&gt;
+		15			ぜひリンクに飛び、ご活用ください。&lt;br&gt;
+		16			(本ページではEclipseという統合開発環境を使用しています)
+		17			&lt;/p&gt;
+		18	
+		19			&lt;nav&gt;
+		20				&lt;lu&gt;	
+		21					&lt;li><span class="red-text">&lt;a href="index.html#first"&gt;</span>①はじめに<span class="red-text">&lt;/a></span>&lt;/li&gt;
+		22					&lt;li><span class="red-text">&lt;a href="index.html#logo"&gt;</span>②ロゴ・見出しの作り方<span class="red-text">&lt;/a></span>&lt;/li&gt;
+		23					&lt;li><span class="red-text">&lt;a href="index.html#link"&gt;</span>③(ここ、)リンクの作成<span class="red-text">&lt;/a></span>&lt;/li&gt;
+		24					&lt;li><span class="red-text">&lt;a href="index.html#img"&gt;</span>④画像挿入<span class="red-text">&lt;/a></span>&lt;/li&gt;
+		25					&lt;li><span class="red-text">&lt;a href="index.html#text"&gt;</span>⑤テキスト編集<span class="red-text">&lt;/a></span>&lt;/li&gt;
+		26				&lt;/lu&gt;
+		27			&lt;/nav&gt;
+		28
+		29			<span class="red-text">&lt;div id="first"&gt;</span>
+		30				&lt;h3&gt;①はじめに&lt;/h3&gt;
+		31				&lt;p&gt;説明&lt;/p&gt;
+		32				&lt;p&gt;説明&lt;/p&gt;
+		33				&lt;p&gt;説明&lt;/p&gt;
+		34			<span class="red-text">&lt;/div&gt;</span>
+		35
+		36			<span class="red-text">&lt;div id="logo"&gt;</span>
+		37				&lt;h3&gt;②ロゴ・見出しの作り方&lt;/h3&gt;
+		38				&lt;p&gt;説明&lt;/p&gt;
+		39				&lt;p&gt;説明&lt;/p&gt;
+		40				&lt;p&gt;説明&lt;/p&gt;
+		41			<span class="red-text">&lt;/div&gt;</span>
+		42
+		43			<span class="red-text">&lt;div id="link"&gt;</span>
+		44				&lt;h3&gt;③(ここ、)リンクの作成&lt;/h3&gt;
+		45				&lt;p&gt;説明&lt;/p&gt;
+		46				&lt;p&gt;説明&lt;/p&gt;
+		47				&lt;p&gt;説明&lt;/p&gt;
+		48			<span class="red-text">&lt;/div&gt;</span>
+		49
+		50			<span class="red-text">&lt;div id="img"&gt;</span>
+		51				&lt;h3&gt;④画像挿入&lt;/h3&gt;
+		52				&lt;p&gt;説明&lt;/p&gt;
+		53				&lt;p&gt;説明&lt;/p&gt;
+		54				&lt;p&gt;説明&lt;/p&gt;
+		55			<span class="red-text">&lt;/div&gt;</span>
+		56
+		57			<span class="red-text">&lt;div id="text"&gt;</span>
+		58				&lt;h3&gt;⑤テキスト編集&lt;/h3&gt;
+		59				&lt;p&gt;説明&lt;/p&gt;
+		60				&lt;p&gt;説明&lt;/p&gt;
+		61				&lt;p&gt;説明&lt;/p&gt;
+		62			<span class="red-text">&lt;/div&gt;</span>
+		63		
+		64		&lt;/main&gt;
+		65		
+		66		&lt;footer&gt;
+		67		
+		68		&lt;/footer&gt;
+		69		
+		70	&lt;/body&gt;
+		71	&lt;/html&gt;
+		</code></pre>
+		</div>
+	</main>
+	
+	<footer>
+		<div class="gotop">
+			<a href="#top"><img src="images/gotop.svg" alt="トップページへ戻る"></a>
+		</div>
+	</footer>
+</body>
+</html>

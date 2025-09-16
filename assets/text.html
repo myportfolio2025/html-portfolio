@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>css</title>
+	<link rel="stylesheet" href="css/style.css"/>
+</head>
+
+<body class="subpage">
+	<header>
+		<h1 class="logo_1">ようこそ<br></h1>
+		<h2 class="logo_2">いよいよページの飾りつけの設定です🌸</h2>
+	</header>
+	
+	<main>
+		<h3>ここからCSSを作成します🌸</h3>
+		<h4>CSSは、HTMLにスタイル機能を提供する言語です</h4>
+	
+		<div class="momo">
+		<h3>&#x31;&#xFE0F;&#x20E3;≪準備です≫<br>
+			まずは、｢①はじめに｣で｢index.html｣を作成した要領で、<span class="blue-text">同じ場所に今度は｢style.css｣を作成</span>しましょう。<br>
+			今回は、<span class="red-text">『新規→CSSファイル→保存先を確認後、名前を入れて完了』</span>です。</h3>
+		<p>｢@charset "UTF-8";｣だけ自動入力されたファイルができあがれば成功です！<br>
+			(このファイルの中に、ページの｢見た目｣を整える設定を行います)</p>
+		</div>
+		
+		<div class="lemon">
+		<h3>&#x32;&#xFE0F;&#x20E3;次に、そこに書いたルールを、先程まで作成していた<span class="blue-text">｢index.html｣に関連付ける</span>と宣言します！<br>
+			これは<span class="green-text">｢index.html｣に追記</span>します！
+			ここでは、&lt;link&gt;タグを使用します<br>
+			構文としては、<span class="red-text">&lt;link rel="stylesheet" href="○○.css"&gt;</span>です</h3>
+		<p>rel="stylesheet"は、リンク先がスタイルシートであることを示しています。<br>
+			href="○○.css"は、読み込むCSSファイルのパス（相対パスや絶対パス）です。<br>
+			🌱終了タグはありません。<br>
+			※このケースの相対パスや絶対パスについては<a href="soutaipass.html">こちら</a></p>
+		<h3>基本的に入力する場所は、｢index.html｣の&lt;head&gt;タグの中です。</h3>
+		<p>&lt;title&gt;の下に、以下を追記しましょう！</p>
+		<h3><span class="red-text">&lt;link rel="stylesheet" href="style.css"&gt;</span></h3>
+		<p>(○○には、今回はstyleが入り、『&lt;link rel="stylesheet" href="style.css"&gt;』と記述することのなりますが、<br>
+			もしご自身で作ったCSSファイルの名前が別でしたら、適宜調整してくださいね)</p>
+		<pre class="code"><code>
+		1	&lt;!DOCTYPE html>						
+		2	&lt;html&gt;
+		3	&lt;head&gt;
+		4	&lt;meta charset="UTF-8"&gt;
+		5	&lt;title&gt;あなたが付けたタイトル&lt;/title&gt;
+		6	<span class="red-text">&lt;link rel="stylesheet" href="style.css"&gt;</span>		
+		7	&lt;/head&gt;
+		8	&lt;body&gt;
+		9		&lt;header&gt;
+		10			&lt;h1&gt;このページの作り方&lt;/h1&gt;
+		11		&lt;/header&gt;
+		12
+		13		&lt;main&gt;
+		14			&lt;p&gt;はじめてWebページを作成する方へ&lt;br&gt;
+		15			ここではWebページを作成するにあたって、基本的なノウハウを以下の通りリストアップしました。&lt;br&gt;
+		16			ぜひリンクに飛び、ご活用ください。&lt;br&gt;
+		17			(本ページではEclipseという統合開発環境を使用しています)
+		18			&lt;/p&gt;
+		19	
+		20			&lt;nav&gt;
+		21				&lt;lu&gt;	
+		22					&lt;li>&lt;a href="first.html"&gt;①はじめに&lt;/a>&lt;/li&gt;
+		23					&lt;li>&lt;a href="logo.html"&gt;②ロゴ・見出しの作り方&lt;/a>&lt;/li&gt;
+		24					&lt;li>&lt;a href="link.html"&gt;③(ここ、)リンクの作成&lt;/a>&lt;/li&gt;
+		25					&lt;li>&lt;a href="img.html"&gt;④画像挿入&lt;/a>&lt;/li&gt;
+		26					&lt;li>&lt;a href="text.html"&gt;⑤テキスト編集&lt;/a>&lt;/li&gt;
+		27				&lt;/lu&gt;
+		28			&lt;/nav&gt;
+		29				
+		30			&lt;img src="images/sample.png" alt="サンプル画像"&gt;
+		31		&lt;/main&gt;
+		32		
+		33		&lt;footer&gt;
+		34		
+		35		&lt;/footer&gt;
+		36		
+		37	&lt;/body&gt;
+		38	&lt;/html&gt;
+		</code></pre>
+		<h3>これで｢style.css｣に書く内容が反映されます！</h3>
+		</div>
+		
+		<div class="momo">
+		<h3>&#x33;&#xFE0F;&#x20E3;コメント挿入<br>
+			次は<span class="green-text">｢style.css｣に記述</span>します。<br>
+			cssにコメントを残すには、『/* コメント */』と、/* と */ で囲みます！</h3>
+		<p>｢○○.html｣のコメントとは書き方が異なりますのでご注意ください。<br>
+			③リンクの作成では、｢○○.html｣を複数作成しましたね。<br>
+			｢○○.html｣を複数作成しても、｢style.css｣は1つでいいので、この部分はこの設定…という風に、後からどの部分にどんなスタイルを適用しているか分かるようにしておきましょう。</p>
+		<h4>今回は以下の通りにコメントをしておきましょう</h4>
+		<pre class="code"><code>
+		1	@charset "UTF-8";					
+		2	<span class="red-text">/* 全てのページに適用 */</span>
+		3
+		4	<span class="red-text">/* 全てのページに適用-ヘッダー */</span>
+		5	
+		6	<span class="red-text">/* 全てのページに適用-メイン */</span>
+		7
+		8	<span class="red-text">/* 全てのページに適用-フッター */</span>
+		9
+		10	<span class="red-text">/* 個別設定 */</span>
+		</code></pre>
+		</div>	
+		
+		<div class="lemon">
+		<h3>&#x34;&#xFE0F;&#x20E3;それではまず、｢このページの作り方｣の部分を設定しましょう！</h3>
+		<p>前項:③リンクの作成で、&lt;body&gt;の中に&lt;header&gt;を挿入しましたね。<br>
+			これを利用します。
+		<h3>書く場所は引き続き<span class="green-text">｢style.css｣</span>です。<br>
+			構文としては、<span class="red-text">『セレクタ{　　}』</span>と宣言し、<span class="blue-text">セレクタには対象となる要素</span>を選択。<span class="blue-text">｛　｝内には各設定</span>を記述します。</h3>
+		
+		<h4>さきほど/* 全てのページに適用-ヘッダー */とコメントした部分の下に</h4>
+		<p class="bordermini">
+		header{
+		text-align: center;
+		padding-top: 75px;
+		padding-bottom: 75px;
+		background-color: rgb(250, 160, 240);
+		}
+		</p>	
+		<h4>と記述してみましょう</h4>
+		
+		<h3>この、『text-align: center;』　と記述することで文字が中央揃えになります。<br>
+			背景色は、『background-color: ○○;』で○○に指定した色になります。<br>
+			背景色の範囲は、『padding-top: ○○px;』、『padding-bottom: ○○px;』で、コンテンツの上下の領域を指定します。</h3>
+		<h4>ちなみに中央揃えは『text-align: center;』でしたが、<br>
+			左揃えだと『text-align: left;』、<br>
+			右揃えだと『text-align: right;』です。</h4>
+		<pre class="code"><code>
+		1	@charset "UTF-8";					
+		2	/* 全てのページに適用 */
+		3
+		4	/* 全てのページに適用-ヘッダー */
+		5	<span class="red-text">header{</span>
+		6	<span class="red-text">text-align: center;</span>
+		7	<span class="red-text">padding-top: 75px;</span>
+		8	<span class="red-text">padding-bottom: 75px;</span>
+		9	<span class="red-text">background-color: rgb(250, 160, 240);</span>
+		10	<span class="red-text">}</span>
+		11	
+		12	/* 全てのページに適用-メイン */
+		13
+		14	/* 全てのページに適用-フッター */
+		15
+		16	/* 個別設定 */
+		</code></pre>	
+		<p>この範囲の指定には、ボックスモデルというものが使用されていますが、ボックスモデルについては<a href="boxmodel.html">こちら</a></p>
+		<p>index.htmlのブラウザページを更新してみると、以下の様になります↓</p>
+		<img src="images/css説明用1.png" alt="cssで見出し編集" class="img-margin-topbottom">
+		</div>
+		
+		<div class="momo">
+		<h3>&#x35;&#xFE0F;&#x20E3;次は、はじめてWebページを作成する方へ<br>
+		ここではWebページを作成するにあたって、～～以降省略	の部分です</h3>
+		<h4>｢style.css｣の/* 全てのページに適用-メイン */とコメントした部分の下に</h4>
+		<pre class="bordermini"><code>
+		main p{
+			background-color: rgb(100, 220, 240);
+		}
+		</code></pre>	
+		<h4>と記述してみましょう</h4>
+		<pre class="code"><code>
+		1	@charset "UTF-8";					
+		2	/* 全てのページに適用 */
+		3
+		4	/* 全てのページに適用-ヘッダー */
+		5	header{
+		6	text-align: center;
+		7	padding-top: 75px;
+		8	padding-bottom: 75px;
+		9	background-color: rgb(250, 160, 240);
+		10	}
+		11	
+		12	/* 全てのページに適用-メイン */
+		13	<span class="red-text">main p{</span>
+		14	<span class="red-text">background-color: rgb(100, 220, 240);</span>
+		15  <span class="red-text">}</span>
+		16
+		17	/* 全てのページに適用-フッター */
+		18
+		19	/* 個別設定 */
+		</code></pre>	
+		<h3>今回は、background-color: rgb(100, 220, 240);で、背景を水色にする設定のみ行っています。<br>
+			『padding-top: ○○px;』、『padding-bottom: ○○px;』で、コンテンツの上下の領域を指定していませんので、<br>
+			コンテンツの上下には塗りつぶしがなされず、&lt;p&gt;タブ部分のみ色が付きましたね。</h3>
+		<img src="images/css説明用2.png" alt="cssでpタグ編集" class="img-margin-bottom">
+		</div>
+		
+		<div class="glay">
+		<h3>ちなみに、この&#x34;&#xFE0F;&#x20E3;、&#x35;&#xFE0F;&#x20E3;はヘッダーやフッダーでひとまとめに編集するだけでなく、<br>
+			<span class="green-text">.htmlのプログラムに</span>、部分的に目印を付けてその部分だけ個別のスタイルを設定することも可能です。<br>
+			その場合、クラス属性を利用してcssを設定します。</h3>	
+			
+		<h3>構文としては、<span class="red-text">『class="クラス属性の値"』</span>です。</h3>
+		
+		<h3>&lt;h1&gt;このページの作り方&lt;/h1&gt;の最初の<span class="blue-text">h1の後ろ</span>に<span class="red-text">半角スペースを入力後、class="○○"</span>と、好きな属性の値を入力します！<br>
+			今回は"logo"と付けてみましょう！<br>
+			その部分だけ抜粋すると↓</h3>
+			<pre class="code"><code>
+			&lt;!-- ヘッダーここから --&gt;
+			&lt;header&gt;
+			&lt;h1 <span class="red-text">class="logo"</span>&gt;このページの作り方&lt;/h1&gt;
+			&lt;/header&gt;
+			</code></pre>
+		<p>これで、この見出しにはlogoというクラス名を付けることができました。</p>
+			
+	
+		<h3>そして<span class="green-text">｢style.css｣</span>の中にこのlogoクラスの設定をどうするのか記述します。<br>
+			書き方としては、<span class="red-text">『.logo{　　}』</span>と宣言し、<span class="blue-text">｛　｝内に各設定</span>を記述します。</h3>
+		
+		<h3>あとは上記同様、『text-align: center;』　と記述すると文字が中央揃えに。<br>
+			背景色は、『background-color: ○○;』で○○に指定した色に。<br>
+			背景色の範囲は、『padding-top: ○○px;』、『padding-bottom: ○○px;』で、コンテンツの上下の領域を指定します。</h3>
+		<h3>｢style.css｣の中には以下を入力します</h3>
+		
+		<pre class="code"><code>
+		/* 全てのページに適用-ヘッダー */
+		.logo{
+		text-align: center;
+		padding-top: 75px;
+		padding-bottom: 75px;
+		background-color: rgb(250, 160, 240);
+		}
+		</code></pre>
+		
+		<img src="images/css説明用1.png" alt="cssで見出し編集">
+		<h4>logoクラスの"このページの作り方"部分の背景(ピンク)が設定できました🌸</h4>
+			
+		<h3>どんどんいきましょう！<br>
+			次はすぐ下の&lt;p&gt;タグに好きなクラス名を付けましょう！<br>
+			今回は"aisatu"と付け、以下の様に追記してみます。</h3>
+		<h3><span class="green-text">&lt;まずはindex.html側&gt;<br></span>
+			&lt;p&gt;はじめてWebページを～～&lt;/p&gt;の最初の<span class="blue-text">pの後ろ</span>に<span class="red-text">半角スペースを入力後、class="aisatu"</span>と付けてみましょう！</h3>
+		
+		<pre class="code"><code>
+		&lt;p <span class="red-text">class="aisatu"</span>&gt;はじめてWebページを作成する方へ&lt;br&gt;
+		ここではWebページを作成するにあたって、～～以降省略	
+		&lt;/p&gt;
+		</code></pre>
+	
+		<h3>更に、<span class="green-text">｢style.css｣</span>の中にも追記してみましょう！</h3>
+		
+		<pre class="code"><code>
+		/* 全てのページに適用-ヘッダー */
+		.logo{
+		text-align: center;
+		padding-top: 75px;
+		padding-bottom: 75px;
+		background-color: rgb(250, 160, 240);
+		}
+		<span class="red-text">.aisatu{
+		background-color: rgb(100, 220, 240);
+		}</span>
+		</code></pre>
+		
+		<p>.aisatuのクラスに色指定のみ追記しています。</p>
+		<img src="images/css説明用2.png" alt="cssで見出し編集">
+		<p>同じように、コンテンツの上下には塗りつぶしがなされず、&lt;p&gt;タブ部分のみ色が付きました。
+				
+		<h3 class="border">おまけ<br>
+			今回は&lt;header&gt;や&lt;fooder&gt;、&lt;main&gt;等のグループごとに飾りつけの設定をしましたが、<br>
+			他にもHTMLでは以下のようなタグも定義されています。
+			<ul class="no-marker blue-text">
+				<li><span class="red-text">&lt;div&gt;</span> …特に意味を持たず要素をグループ化する</li>
+				<li><span class="orange-text">&lt;nav&gt;</span> …ページ内のナビゲーション</li>
+				<li>&lt;article&gt; …記事・投稿など独立した内容</li>
+				<li>&lt;section&gt; …汎用セクション。&lt;div&gt;より少し重要な意味合い</li>
+				<li>&lt;aside&gt; …補足情報や、本題とは少し離れる情報(広告や関連記事など)</li>
+			</ul></h3>
+		</div>
+		
+		<div class="lemon">		
+		<h3>&#x36;&#xFE0F;&#x20E3;また、前項④画像挿入でお好きな画像を入れられた方は、以下の様になっているかと思います。↓</h3>
+			<img src="images/css説明用3.png" alt="css画像余白編集">
+		<h3>このままでは試しに入れた画像(金魚)がつめつめで気持ち悪いですよね。<br>
+			画像の上に余白を入れましょう！</h3>
+			
+		<h3>画像の場合は、まず<span class="green-text">index.html側</span>では<br>
+			<span class="blue-text">&lt;img src="images/sample.png" alt="画像サンプル"&gt;の後ろの部分</span>に<span class="red-text">半角スペースを入力後、 class="img-margin"</span>を挿入します！<br>
+			&lt;img src="images/sample.png" alt="画像サンプル"<span class="red-text"> class="img-margin"</span>&gt;です</h3>
+		<pre class="code"><code>
+		1	&lt;!DOCTYPE html>						
+		2	&lt;html&gt;
+		3	&lt;head&gt;
+		4	&lt;meta charset="UTF-8"&gt;
+		5	&lt;title&gt;あなたが付けたタイトル&lt;/title&gt;
+		6	&lt;link rel="stylesheet" href="style.css"&gt;	
+		7	&lt;/head&gt;
+		8	&lt;body&gt;
+		9		&lt;header&gt;
+		10			&lt;h1&gt;このページの作り方&lt;/h1&gt;
+		11		&lt;/header&gt;
+		12
+		13		&lt;main&gt;
+		14			&lt;p&gt;はじめてWebページを作成する方へ&lt;br&gt;
+		15			ここではWebページを作成するにあたって、基本的なノウハウを以下の通りリストアップしました。&lt;br&gt;
+		16			ぜひリンクに飛び、ご活用ください。&lt;br&gt;
+		17			(本ページではEclipseという統合開発環境を使用しています)
+		18			&lt;/p&gt;
+		19	
+		20			&lt;nav&gt;
+		21				&lt;lu&gt;	
+		22					&lt;li>&lt;a href="first.html"&gt;①はじめに&lt;/a>&lt;/li&gt;
+		23					&lt;li>&lt;a href="logo.html"&gt;②ロゴ・見出しの作り方&lt;/a>&lt;/li&gt;
+		24					&lt;li>&lt;a href="link.html"&gt;③(ここ、)リンクの作成&lt;/a>&lt;/li&gt;
+		25					&lt;li>&lt;a href="img.html"&gt;④画像挿入&lt;/a>&lt;/li&gt;
+		26					&lt;li>&lt;a href="text.html"&gt;⑤テキスト編集&lt;/a>&lt;/li&gt;
+		27				&lt;/lu&gt;
+		28			&lt;/nav&gt;
+		29				
+		30			&lt;img src="images/sample.png" alt="サンプル画像"<span class="red-text"> class="img-margin"</span>&gt;
+		31		&lt;/main&gt;
+		32		
+		33		&lt;footer&gt;
+		34		
+		35		&lt;/footer&gt;
+		36		
+		37	&lt;/body&gt;
+		38	&lt;/html&gt;
+		</code></pre>
+		<h3>更に、<span class="green-text">｢style.css｣</span>の中には今度はpaddingではなく、<span class="blue-text">margin</span>を指定します。</h3>
+		<h4>/* 全てのページに適用-メイン */とコメントした部分の中に</h4>
+		<pre class="bordermini"><code>
+		.img-margin {
+		margin-top: 20px;
+		}
+		</code></pre>
+		<h4>と記述してみましょう</h4>
+		<pre class="code"><code>
+		1	@charset "UTF-8";					
+		2	/* 全てのページに適用 */
+		3
+		4	/* 全てのページに適用-ヘッダー */
+		5	header{
+		6	text-align: center;
+		7	padding-top: 75px;
+		8	padding-bottom: 75px;
+		9	background-color: rgb(250, 160, 240);
+		10	}
+		11	
+		12	/* 全てのページに適用-メイン */
+		13	main p{
+		14	background-color: rgb(100, 220, 240);
+		15	}
+		16	<span class="red-text">.img-margin {</span>
+  		17	<span class="red-text">margin-top: 20px;</span>
+		18	<span class="red-text">}</span>
+		19
+		20	/* 全てのページに適用-フッター */
+		21
+		22	/* 個別設定 */
+		</code></pre>
+		
+		<img src="images/css説明用4.png" alt="cssで画像の余白編集" class="img-margin-bottom">
+		<h4>リストと画像の間に、20pxの余白を入れることができました。<br>
+			是非、皆さんの素敵な画像挿入の際に、この余白の設定についてもご活用ください★</h4>
+		<p>余白の領域の設定時にも、ページ上部で出てきたボックスモデルを使用しています。<br>
+			改めまして、ボックスモデルについては<a href="boxmodel.html">こちら</a></p>
+		</div>
+			
+		<!-- ここに画像背景 -->
+		<div class="momo">
+		<h3>おまけ</h3>
+		<h4>前項④画像挿入の中で、画像はコンテンツの背景としても挿入可能と述べました。↓</h4>
+		<div class="image-container">
+			<img src="images/画像挿入後おまけ1.png" alt="コンテンツの背景に画像挿入" class="img-margin-topbottom">
+			<img src="images/画像挿入後おまけ2.png" alt="コンテンツの背景に画像挿入" class="img-margin-topbottom">
+		</div>
+		<h4>これらの各＜CSS側＞コードを以下に記します。</h4><br>
+		<h4>①＜CSS側＞（画像並列）<br>
+			<pre class="code"><code>
+			/* ヘッダー */
+			header {
+			text-align: center;
+			padding-top: 75px;
+			padding-bottom: 75px;<span class="red-text">
+			background-image: url("</span>../images/sample.png<span class="red-text">");</span>
+			background-size: auto;	/* 画像を元のサイズで表示 */
+			background-position: left center;	/* 左に配置 */
+			background-repeat: repeat-x;	/* 画像を横方向に繰り返す */
+			}
+			</code></pre>
+			
+			②＜CSS側＞（画像並列しない）<br>
+			<pre class="code"><code>
+			/* ヘッダー */
+			header {
+			text-align: center;
+			padding-top: 75px;
+			padding-bottom: 75px;<span class="red-text">
+			background-image: url("</span>../images/sample.png<span class="red-text">");</span>
+			background-size: cover;	/* 要素全体をカバー */
+			background-position: center;	/* 中央に配置 */
+			background-repeat: no-repeat;	/* 繰り返しなし */
+			}
+			</code></pre><br>
+			※HTML側は、以下の通り、headerが設定されておれば問題ないです↓</h4>
+			<pre class="code"><code>
+			&lt;header&gt;
+			&lt;h1&gt;このページの作り方&lt;/h1&gt;
+			&lt;/header&gt;
+			</code></pre><br>
+		</div>
+		
+		<div class="lemon">
+		<h3>おまけ-2</h3>
+		<h4>アニメーション画像について↓</h4>
+			<div class="image-container">
+			<img src="images/画像1mini.png" alt="アニメーション画像挿入" class="img-margin-topbottom">
+			<img src="images/画像2mini.png" alt="アニメーション画像挿入" class="img-margin-topbottom">
+			<img src="images/画像3mini.png" alt="アニメーション画像挿入" class="img-margin-topbottom">
+		</div>
+		<h4>
+			今回使用したコードを以下の通り公開します。<br>
+			また、これについては<span class="red-text">新しいファイルを作成する必要があります！</span><br>
+			<span class="red-text">index.htmlを保存している場所に、『js』というファイルを作成</span>してください。<br>
+			その中に、<span class="red-text">「script.js」というファイルを作成</span>します。</h4>
+		<p class="border">Eclipseでの作成手順は、<br>
+			<span class="red-text">新規→その他→一般→ファイル→ファイル名：script.js→保存先が「js/」になっているか確認→完了</span></p><br>
+			
+		<h4>＜HTML側＞<br>
+		<pre class="code"><code>
+		&lt;!-- ★ アニメーション画像を表示する部分 --&gt;
+		&lt;div id="slide-container"&gt;
+			&lt;img id="slide-image" src="" alt="アニメーション画像"&gt;
+		&lt;/div&gt;
+		</code></pre>
+			
+		＜CSS側＞<br>
+		<pre class="code"><code>
+		/* ★ アニメーション用の画像コンテナと画像 */
+		#slide-container {
+  			position: relative;
+			width: 100%;
+			height: 300px;
+			overflow: hidden;
+			margin-top: 40px;
+		}
+
+		#slide-image {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			 height: 200px;
+			opacity: 0;
+			transition: left 0.5s ease, opacity 0.5s;
+		}
+		</code></pre>
+			
+		＜js/script.js側＞<br>
+		<pre class="code"><code>
+		const imagePaths = [
+			"images/画像1.png",
+			"images/画像2.png",
+			"images/画像3.png"
+		];
+
+		const img = document.getElementById("slide-image");
+
+		function showImage(index) {
+			return new Promise((resolve) => {
+				img.src = imagePaths[index];
+				img.style.opacity = "0";
+				img.style.left = "100%";
+				img.style.transform = "translateY(-50%)";
+
+				const delay = index === 0 ? 3000 : 1500;
+
+				setTimeout(() => {
+					img.style.opacity = "1";
+
+					setTimeout(() => {
+						img.style.left = "50%";
+						img.style.transform = "translate(-50%, -50%)";
+					}, 1000);
+
+					setTimeout(() => {
+						img.style.left = "0%";
+						img.style.transform = "translate(0%, -50%)";
+					}, 2000);
+
+					setTimeout(() => {
+						resolve();
+					}, 3000);
+
+				}, delay);
+			});
+		}
+
+		async function startAnimation() {
+			while (true) {
+				for (let i = 0; i < imagePaths.length; i++) {
+					await showImage(i);
+					img.style.opacity = "0";
+					await new Promise(resolve => setTimeout(resolve, 500));
+				}
+
+				img.style.opacity = "0";
+				img.style.left = "100%";
+				img.style.transform = "translateY(-50%)";
+				await new Promise(resolve => setTimeout(resolve, 500));
+			}
+		}
+
+		window.onload = () => {
+			startAnimation();
+		};
+		</code></pre>		
+		</h4>	
+			
+		
+			
+
+		<h3>以上で、ホームページに掲げた最低限のページの作成(+画像挿入)は終了です！お疲れさまでした！</h3>
+		<p>実用的なレベルにはとても達成できませんでしたが、ぼちぼち学んでいけたらと思います。<br>
+			そして、ここまでで掲載できなかったノウハウは、ホームページの下部に、『番外編(レジュメ)』として、今後増やしていきたいと思います。</p>
+	
+	</main>
+
+	
+	<footer>	
+		<div class="gotop">
+			<a href="#top"><img src="images/gotop.svg" alt="トップページへ戻る"></a>
+		</div>
+	</footer>
+</body>
+</html>

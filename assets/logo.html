@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>②ロゴの作り方</title>
+<link rel="stylesheet" href="css/style.css"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.css" rel="stylesheet">
+</head>
+
+<body class="subpage">
+	<!-- ヘッダー -->
+	<header>
+		<h1>ようこそ<br></h1>
+		<h2>ここではロゴの作成ついて掲示します</h2>
+	</header>
+	<!-- ヘッダーここまで -->
+	
+	<!-- メイン -->
+	<main>
+		<h3>この部分です</h3>
+		<img src="images/ロゴ画面.png" alt="ロゴ説明用">
+		
+		<div class="momo">
+		<h3>｢はじめに｣のページより、現在｢index.html｣というクラスが出来上がり、そこに以下が記されていると幸いですが↓	</h3>
+		<pre class="code"><code>
+		1	&lt;!DOCTYPE html>						
+		2	&lt;html&gt;
+		3	&lt;head&gt;
+		4	&lt;meta charset="UTF-8"&gt;
+		5	&lt;title&gt;あなたが付けたタイトル&lt;/title&gt;
+		6	&lt;/head&gt;
+		7	&lt;body&gt;
+		8	
+		9	&lt;/body&gt;
+		10	&lt;/html&gt;
+		</code></pre>
+			
+		<h3>この<span class="blue-text">&lt;body&gt;　～　&lt;/body&gt;の間</span>に、ページに表示したいものを入力します。</h3>
+		</div>
+		
+		<div class="lemon">
+		<img src="images/おまけ1.png" alt="ページ構成説明用" class="img-margin-topbottom">
+			<!-- <p>補足ですが、上の&lt;head&gt;の部分はページそのものの情報を書く所になります(ブラウザには表示されません)。</p> -->
+		</div>
+		
+		<div class="momo">	
+		<h3>まず、文字の入力については以下のように定められています。</h3>
+		<h3 class="blue-text">①見出し＝<span class="red-text">&lt;h〇&gt;</span>　～　<span class="red-text">&lt;/h〇&gt;</span>間に書く</h3>
+		<h4>&lt;h1&gt;～&lt;h6&gt;まで用意されています。
+			h1が最も重要な見出しで、大きいフォント・太字で設定されています。<br>
+			hの後の数が大きい程重要度が下がります。	</h4>
+		<p>	例えばh2が3つ等、複数でも可です。また、h1の次にh3を使用等も可で、必ずしも順番に使う必要はありません。
+		<h3 class="blue-text">②段落＝<span class="red-text">&lt;p&gt;</span>　～　<span class="red-text">&lt;p&gt;</span>間に書く</h3>
+		
+		<h3 class="blue-text">③改行＝<span class="red-text">&lt;br&gt;</span></h3>
+		<h4>①・②どちらも、文字列の途中で改行したい時には<span class="red-text">&lt;br&gt;</span>と入力します。</h4>
+		</div>
+		
+		<div class="lemon">
+		<h3>今回、このページの②-1部分の文字は&lt;h1&gt;タグを、②-2部分の文字は&lt;p&gt;タグを使って記入しています。</h3>
+		
+		<h3>プログラムの8行目以降に、以下の通り追記すると、下の様なページが完成します↓</h3>
+		<pre class="code"><code>
+		1	&lt;!DOCTYPE html>						
+		2	&lt;html&gt;
+		3	&lt;head&gt;
+		4	&lt;meta charset="UTF-8"&gt;
+		5	&lt;title&gt;あなたが付けたタイトル&lt;/title&gt;
+		6	&lt;/head&gt;
+		7	&lt;body&gt;
+		8		<span class="red-text">&lt;h1&gt;このページの作り方&lt;/h1&gt;
+		9		&lt;p&gt;はじめてWebページを作成する方へ&lt;br&gt;
+		10		ここではWebページを作成するにあたって、基本的なノウハウを以下の通りリストアップしました。&lt;br&gt;
+		11		ぜひリンクに飛び、ご活用ください。&lt;br&gt;
+		12		(本ページではEclipseという統合開発環境を使用しています)
+		13		&lt;/p&gt;</span>
+		14	&lt;/body&gt;
+		15	&lt;/html&gt;
+		</code></pre>
+	
+		<img src="images/確認用1.png" alt="途中経過確認用Photo">
+		<h3>まずは文字を表示することができました！<br>
+			文字やページの各設定は、⑤テキスト編集にて行います。</h3>
+		</div>
+		
+		<div class="momo">
+		<p>また、このように途中経過をブラウザに表示するには、以下手順をご覧ください↓<br>
+			本ページの様に、Eclipse使用の場合には、画面左端｢パッケージ・エクスプローラー｣に、作成したクラスが一覧になっていると思われます。<br>
+			表示したいクラスの上で右クリック→｢次で開く｣→｢Webブラウザー｣で表示できます。<br>
+			この後も、都度経過を確認したい時には、プログラムを上書きした後にブラウザの更新ボタンを押下すると確認できますよ。
+		</p>
+		</div>
+		
+	</main>
+	<!-- メインここまで -->
+	
+	<!-- フッター -->
+	<footer>
+		<div class="gotop">
+			<a href="#top"><img src="images/gotop.svg" alt="トップページへ戻る"></a>
+		</div>
+	</footer>
+	<!-- フッターここまで -->
+	
+</body>
+
+
+</html>
